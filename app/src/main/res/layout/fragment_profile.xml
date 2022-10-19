@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myProfileFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_black"
+    tools:context=".ProfileFragment">
+
+    <TextView
+        android:id="@+id/myProfileTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin"
+        android:fontFamily="@font/albertasans_meduim"
+        android:text="@string/profile"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/textSize15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/profilePicCardView"
+        android:layout_width="@dimen/xhdpi80"
+        android:layout_height="@dimen/xhdpi80"
+        android:layout_marginTop="@dimen/xhdpi30"
+        app:cardCornerRadius="@dimen/xhdpi40"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/myProfileTv"
+        app:cardBackgroundColor="@android:color/transparent">
+
+        <ImageView
+            android:id="@+id/profilePicIv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/profile_pic_place_holder"
+            app:tint="@color/gray"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profilePicCardView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/accountCV"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/xhdpi45"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:cardCornerRadius="@dimen/xhdpi10"
+                app:cardBackgroundColor="@color/gray"
+                android:alpha="0.5" />
+
+            <ImageView
+                android:id="@+id/accountIcon"
+                android:layout_width="@dimen/xhdpi20"
+                android:layout_height="@dimen/xhdpi20"
+                android:src="@drawable/ic_profile"
+                app:layout_constraintTop_toTopOf="@id/accountCV"
+                app:layout_constraintBottom_toBottomOf="@id/accountCV"
+                app:layout_constraintStart_toStartOf="@id/accountCV"
+                android:layout_marginStart="@dimen/xhdpi10"
+                app:tint="@color/accent"
+                android:elevation="1dp"/>
+
+            <TextView
+                android:id="@+id/accountTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textSize12.5"
+                android:fontFamily="@font/albertasans_regular"
+                android:textColor="@color/text_gray"
+                app:layout_constraintStart_toEndOf="@id/accountIcon"
+                app:layout_constraintTop_toTopOf="@id/accountCV"
+                app:layout_constraintBottom_toBottomOf="@id/accountCV"
+                android:text="@string/account"
+                android:layout_marginStart="@dimen/xhdpi10"/>
+
+            <ImageView
+                android:layout_width="@dimen/xhdpi15"
+                android:layout_height="@dimen/xhdpi15"
+                android:src="@drawable/ic_baseline_arrow_forward"
+                app:layout_constraintTop_toTopOf="@id/accountCV"
+                app:layout_constraintBottom_toBottomOf="@id/accountCV"
+                app:layout_constraintEnd_toEndOf="@id/accountCV"
+                android:layout_marginEnd="@dimen/xhdpi10"/>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/ordersCV"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/xhdpi45"
+                app:layout_constraintTop_toBottomOf="@id/accountCV"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/margin"
+                app:cardCornerRadius="@dimen/xhdpi10"
+                app:cardBackgroundColor="@color/gray"
+                android:alpha="0.5" />
+
+            <ImageView
+                android:id="@+id/ordersIcon"
+                android:layout_width="@dimen/xhdpi20"
+                android:layout_height="@dimen/xhdpi20"
+                android:src="@drawable/orders_box_open_outlined"
+                app:layout_constraintTop_toTopOf="@id/ordersCV"
+                app:layout_constraintBottom_toBottomOf="@id/ordersCV"
+                app:layout_constraintStart_toStartOf="@id/ordersCV"
+                android:layout_marginStart="@dimen/xhdpi10"
+                app:tint="@color/accent"
+                android:elevation="1dp"/>
+
+            <TextView
+                android:id="@+id/ordersTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textSize12.5"
+                android:fontFamily="@font/albertasans_regular"
+                android:textColor="@color/text_gray"
+                app:layout_constraintStart_toEndOf="@id/ordersIcon"
+                app:layout_constraintTop_toTopOf="@id/ordersCV"
+                app:layout_constraintBottom_toBottomOf="@id/ordersCV"
+                android:text="@string/myOrders"
+                android:layout_marginStart="@dimen/xhdpi10"/>
+
+            <ImageView
+                android:layout_width="@dimen/xhdpi15"
+                android:layout_height="@dimen/xhdpi15"
+                android:src="@drawable/ic_baseline_arrow_forward"
+                app:layout_constraintTop_toTopOf="@id/ordersCV"
+                app:layout_constraintBottom_toBottomOf="@id/ordersCV"
+                app:layout_constraintEnd_toEndOf="@id/ordersCV"
+                android:layout_marginEnd="@dimen/xhdpi10"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/shippingAddressesCV"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/xhdpi45"
+                app:layout_constraintTop_toBottomOf="@id/ordersCV"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/margin"
+                app:cardCornerRadius="@dimen/xhdpi10"
+                app:cardBackgroundColor="@color/gray"
+                android:alpha="0.5" />
+
+            <ImageView
+                android:id="@+id/shippingAddressesIcon"
+                android:layout_width="@dimen/xhdpi20"
+                android:layout_height="@dimen/xhdpi20"
+                android:src="@drawable/ic_home"
+                app:layout_constraintTop_toTopOf="@id/shippingAddressesCV"
+                app:layout_constraintBottom_toBottomOf="@id/shippingAddressesCV"
+                app:layout_constraintStart_toStartOf="@id/shippingAddressesCV"
+                android:layout_marginStart="@dimen/xhdpi10"
+                app:tint="@color/accent"
+                android:elevation="1dp"/>
+
+            <TextView
+                android:id="@+id/shippingAddressesTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textSize12.5"
+                android:fontFamily="@font/albertasans_regular"
+                android:textColor="@color/text_gray"
+                app:layout_constraintStart_toEndOf="@id/shippingAddressesIcon"
+                app:layout_constraintTop_toTopOf="@id/shippingAddressesCV"
+                app:layout_constraintBottom_toBottomOf="@id/shippingAddressesCV"
+                android:text="@string/shippingAddresses"
+                android:layout_marginStart="@dimen/xhdpi10"/>
+
+            <ImageView
+                android:layout_width="@dimen/xhdpi15"
+                android:layout_height="@dimen/xhdpi15"
+                android:src="@drawable/ic_baseline_arrow_forward"
+                app:layout_constraintTop_toTopOf="@id/shippingAddressesCV"
+                app:layout_constraintBottom_toBottomOf="@id/shippingAddressesCV"
+                app:layout_constraintEnd_toEndOf="@id/shippingAddressesCV"
+                android:layout_marginEnd="@dimen/xhdpi10"/>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/settingsCV"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/xhdpi45"
+                app:layout_constraintTop_toBottomOf="@id/shippingAddressesCV"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/margin"
+                app:cardCornerRadius="@dimen/xhdpi10"
+                app:cardBackgroundColor="@color/gray"
+                android:alpha="0.5" />
+
+            <ImageView
+                android:id="@+id/settingsIcon"
+                android:layout_width="@dimen/xhdpi20"
+                android:layout_height="@dimen/xhdpi20"
+                android:src="@drawable/settings"
+                app:layout_constraintTop_toTopOf="@id/settingsCV"
+                app:layout_constraintBottom_toBottomOf="@id/settingsCV"
+                app:layout_constraintStart_toStartOf="@id/settingsCV"
+                android:layout_marginStart="@dimen/xhdpi10"
+                app:tint="@color/accent"
+                android:elevation="1dp"/>
+
+            <TextView
+                android:id="@+id/settingsTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textSize12.5"
+                android:fontFamily="@font/albertasans_regular"
+                android:textColor="@color/text_gray"
+                app:layout_constraintStart_toEndOf="@id/settingsIcon"
+                app:layout_constraintTop_toTopOf="@id/settingsCV"
+                app:layout_constraintBottom_toBottomOf="@id/settingsCV"
+                android:text="@string/settings"
+                android:layout_marginStart="@dimen/xhdpi10"/>
+
+            <ImageView
+                android:layout_width="@dimen/xhdpi15"
+                android:layout_height="@dimen/xhdpi15"
+                android:src="@drawable/ic_baseline_arrow_forward"
+                app:layout_constraintTop_toTopOf="@id/settingsCV"
+                app:layout_constraintBottom_toBottomOf="@id/settingsCV"
+                app:layout_constraintEnd_toEndOf="@id/settingsCV"
+                android:layout_marginEnd="@dimen/xhdpi10"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".OrdersFragment"
+    android:background="@color/bg_black">
+
+    <TextView
+        android:id="@+id/myOrdersTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/xhdpi10"
+        android:fontFamily="@font/albertasans_meduim"
+        android:text="@string/myOrders"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/textSize15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/orderChips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:selectionRequired="true"
+        app:singleLine="true"
+        app:singleSelection="true"
+        app:layout_constraintTop_toBottomOf="@id/myOrdersTV"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/xhdpi10"
+        android:layout_marginStart="@dimen/margin"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/deliveredOrdersRV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/orderChips"
+        android:layout_margin="@dimen/margin"
+        tools:listitem="@layout/order_item" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/processingOrdersRV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/orderChips"
+        android:layout_margin="@dimen/margin"
+        tools:listitem="@layout/order_item" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

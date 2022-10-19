@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg_black"
+    android:orientation="vertical"
+    tools:context=".CartFragment">
+
+    <LinearLayout
+        android:id="@+id/vvv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/checkoutLL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginTop="@dimen/xhdpi10"
+            android:fontFamily="@font/albertasans_meduim"
+            android:text="@string/My_Cart"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/textSize15" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cartRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/xhdpi10"
+            android:paddingTop="@dimen/xhdpi10"
+            android:paddingEnd="@dimen/xhdpi10"
+            tools:itemCount="3"
+            tools:listitem="@layout/cart_item" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/checkoutLL"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginBottom="@dimen/margin"
+            android:layout_marginTop="@dimen/xhdpi10"
+            android:background="@color/text_gray_darker" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/subTotalTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_marginEnd="@dimen/xhdpi6.5"
+                android:fontFamily="@font/albertasans_regular"
+                android:text="@string/Sub_Total"
+                android:textColor="@color/text_gray_darker"
+                android:textSize="@dimen/textSize12.5" />
+
+            <TextView
+                android:id="@+id/subTotalPriceTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/xhdpi6.5"
+                android:layout_marginEnd="@dimen/margin"
+                android:fontFamily="@font/albertasans_meduim"
+                android:text="$209.99"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/textSize12.5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_toStartOf="@id/subTotalPriceTV"
+                android:layout_toEndOf="@id/subTotalTV"
+                android:fontFamily="@font/albertasans_regular"
+                android:maxLines="1"
+                android:text="@string/linking_dots"
+                android:textColor="@color/text_gray_darker"
+                android:textSize="@dimen/textSize12.5" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xhdpi15">
+
+            <TextView
+                android:id="@+id/shippingTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_marginEnd="@dimen/xhdpi6.5"
+                android:fontFamily="@font/albertasans_regular"
+                android:text="@string/Shipping"
+                android:textColor="@color/text_gray_darker"
+                android:textSize="@dimen/textSize12.5" />
+
+            <TextView
+                android:id="@+id/ShippingPriceTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/xhdpi6.5"
+                android:layout_marginEnd="@dimen/margin"
+                android:fontFamily="@font/albertasans_meduim"
+                android:text="$60.00"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/textSize12.5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_toStartOf="@id/ShippingPriceTV"
+                android:layout_toEndOf="@id/shippingTV"
+                android:fontFamily="@font/albertasans_regular"
+                android:maxLines="1"
+                android:text="@string/linking_dots"
+                android:textColor="@color/text_gray_darker"
+                android:textSize="@dimen/textSize12.5" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xhdpi15"
+            android:layout_marginBottom="@dimen/xhdpi10">
+
+            <TextView
+                android:id="@+id/bagTotalTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_marginEnd="@dimen/xhdpi6.5"
+                android:fontFamily="@font/albertasans_regular"
+                android:text="@string/Bag_Total"
+                android:textColor="@color/text_gray_darker"
+                android:textSize="@dimen/textSize12.5" />
+
+            <TextView
+                android:id="@+id/bagTotalPriceTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/xhdpi6.5"
+                android:layout_marginEnd="@dimen/margin"
+                android:fontFamily="@font/albertasans_meduim"
+                android:text="$369.99"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/textSize12.5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_toStartOf="@id/bagTotalPriceTV"
+                android:layout_toEndOf="@id/bagTotalTV"
+                android:fontFamily="@font/albertasans_regular"
+                android:maxLines="1"
+                android:text="@string/linking_dots"
+                android:textColor="@color/text_gray_darker"
+                android:textSize="@dimen/textSize12.5" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/checkoutBtRL"
+            android:layout_width="@dimen/checkoutButtonWidth"
+            android:layout_height="@dimen/checkoutButtonHeight"
+            android:layout_margin="@dimen/xhdpi20">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/checkoutButtonHeightInside"
+                android:layout_alignParentTop="true"
+                android:backgroundTint="@color/text_gray"
+                app:cardCornerRadius="@dimen/xhdpi10"
+                app:cardElevation="8dip"
+                app:strokeColor="@color/text_gray_darker"
+                app:strokeWidth="1dip">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/albertasans_meduim"
+                    android:text="@string/Checkout"
+                    android:textAlignment="center"
+                    android:textColor="@color/bg_black"
+                    android:textSize="@dimen/textSize12.5"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/checkoutButtonHeightInside"
+                android:layout_alignParentBottom="true"
+                android:backgroundTint="@color/accent"
+                app:cardCornerRadius="@dimen/xhdpi10" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/checkoutButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/transparent"
+                android:elevation="50dip"
+                app:elevation="50dip" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

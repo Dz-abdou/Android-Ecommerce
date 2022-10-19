@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg_black"
+    android:orientation="vertical"
+    tools:context=".AddShippingAddressFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fullNameTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:elevation="10dip"
+            app:boxCornerRadiusTopEnd="@dimen/xhdpi5"
+            app:boxCornerRadiusTopStart="@dimen/xhdpi5"
+            android:hint="@string/full_name"
+            android:textColorHint="@color/text_gray_darker"
+            app:hintTextColor="@color/accent"
+            app:boxBackgroundColor="@color/gray"
+            app:boxCornerRadiusBottomEnd="@dimen/xhdpi5"
+            app:boxCornerRadiusBottomStart="@dimen/xhdpi5"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fullNameTIET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_gray"
+                android:maxLines="1"
+                android:inputType="text"
+                android:fontFamily="@font/albertasans_regular"
+                android:textSize="@dimen/textSize12.5"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/addressTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fullNameTIL"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:elevation="10dip"
+            app:boxCornerRadiusTopEnd="@dimen/xhdpi5"
+            app:boxCornerRadiusTopStart="@dimen/xhdpi5"
+            android:hint="@string/address"
+            android:textColorHint="@color/text_gray_darker"
+            app:hintTextColor="@color/accent"
+            app:boxBackgroundColor="@color/gray"
+            app:boxCornerRadiusBottomEnd="@dimen/xhdpi5"
+            app:boxCornerRadiusBottomStart="@dimen/xhdpi5"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/addressTIET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_gray"
+                android:maxLines="1"
+                android:inputType="text"
+                android:fontFamily="@font/albertasans_regular"
+                android:textSize="@dimen/textSize12.5"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cityTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addressTIL"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:elevation="10dip"
+            app:boxCornerRadiusTopEnd="@dimen/xhdpi5"
+            app:boxCornerRadiusTopStart="@dimen/xhdpi5"
+            android:hint="@string/city"
+            android:textColorHint="@color/text_gray_darker"
+            app:hintTextColor="@color/accent"
+            app:boxBackgroundColor="@color/gray"
+            app:boxCornerRadiusBottomEnd="@dimen/xhdpi5"
+            app:boxCornerRadiusBottomStart="@dimen/xhdpi5"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cityTIET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_gray"
+                android:maxLines="1"
+                android:inputType="text"
+                android:fontFamily="@font/albertasans_regular"
+                android:textSize="@dimen/textSize12.5"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/stateProvinceRegionTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cityTIL"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:elevation="10dip"
+            app:boxCornerRadiusTopEnd="@dimen/xhdpi5"
+            app:boxCornerRadiusTopStart="@dimen/xhdpi5"
+            android:hint="@string/stateProvinceRegion"
+            android:textColorHint="@color/text_gray_darker"
+            app:hintTextColor="@color/accent"
+            app:boxBackgroundColor="@color/gray"
+            app:boxCornerRadiusBottomEnd="@dimen/xhdpi5"
+            app:boxCornerRadiusBottomStart="@dimen/xhdpi5"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/stateProvinceRegionTIET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_gray"
+                android:maxLines="1"
+                android:inputType="text"
+                android:fontFamily="@font/albertasans_regular"
+                android:textSize="@dimen/textSize12.5"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/zipCodeTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/stateProvinceRegionTIL"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:elevation="10dip"
+            app:boxCornerRadiusTopEnd="@dimen/xhdpi5"
+            app:boxCornerRadiusTopStart="@dimen/xhdpi5"
+            android:hint="@string/zipCode"
+            android:textColorHint="@color/text_gray_darker"
+            app:hintTextColor="@color/accent"
+            app:boxBackgroundColor="@color/gray"
+            app:boxCornerRadiusBottomEnd="@dimen/xhdpi5"
+            app:boxCornerRadiusBottomStart="@dimen/xhdpi5"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/zipCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_gray"
+                android:maxLines="1"
+                android:inputType="text"
+                android:fontFamily="@font/albertasans_regular"
+                android:textSize="@dimen/textSize12.5"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

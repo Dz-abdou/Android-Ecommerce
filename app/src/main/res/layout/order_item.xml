@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/gray"
+    app:cardCornerRadius="@dimen/xhdpi5"
+    app:cardElevation="@dimen/xhdpi10"
+    android:layout_marginBottom="@dimen/margin">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/orderItemCV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/xhdpi150">
+
+        <TextView
+            android:id="@+id/orderNumberTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/xhdpi10"
+            android:layout_marginTop="@dimen/xhdpi10"
+            android:elevation="@dimen/xhdpi150"
+            android:fontFamily="@font/albertasans_meduim"
+            android:text="@string/orderNo"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/textSize12.5"
+            app:layout_constraintBottom_toTopOf="@+id/trackingCodeText"
+            app:layout_constraintEnd_toStartOf="@+id/orderDateTv"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/orderItemCV"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/orderDateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/xhdpi10"
+            android:alpha="0.5"
+            android:fontFamily="@font/albertasans_regular"
+            android:text="19-12-2022"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/textSize11"
+            app:layout_constraintEnd_toEndOf="@id/orderItemCV"
+            app:layout_constraintStart_toEndOf="@id/orderNumberTV"
+            app:layout_constraintTop_toTopOf="@id/orderItemCV" />
+
+        <TextView
+            android:id="@+id/trackingCodeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/xhdpi10"
+            android:layout_marginTop="@dimen/xhdpi10"
+            android:alpha="0.5"
+            android:fontFamily="@font/albertasans_regular"
+            android:text="@string/tracking_code"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/textSize11"
+            app:layout_constraintBottom_toTopOf="@+id/QuantityText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/orderNumberTV" />
+
+        <TextView
+            android:id="@+id/trackingNumberTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/xhdpi150"
+            android:fontFamily="@font/albertasans_regular"
+            android:text=" YA3698745850156"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/textSize11"
+            app:layout_constraintBottom_toBottomOf="@id/trackingCodeText"
+            app:layout_constraintStart_toEndOf="@id/trackingCodeText"
+            app:layout_constraintTop_toTopOf="@id/trackingCodeText" />
+
+        <TextView
+            android:id="@+id/QuantityText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/xhdpi10"
+            android:layout_marginTop="@dimen/xhdpi10"
+            android:alpha="0.5"
+            android:fontFamily="@font/albertasans_regular"
+            android:text="@string/quantity"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/textSize11"
+            app:layout_constraintBottom_toTopOf="@+id/detailsButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/trackingCodeText" />
+
+        <TextView
+            android:id="@+id/totalAmountText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.5"
+            android:fontFamily="@font/albertasans_regular"
+            android:text="@string/total_amount"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/textSize11"
+            app:layout_constraintBottom_toBottomOf="@+id/PriceTv"
+            app:layout_constraintEnd_toStartOf="@id/PriceTv"
+            app:layout_constraintTop_toTopOf="@+id/PriceTv" />
+
+        <TextView
+            android:id="@+id/QuantityTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/xhdpi150"
+            android:fontFamily="@font/albertasans_bold"
+            android:text=" 3"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/textSize11"
+            app:layout_constraintBottom_toBottomOf="@id/QuantityText"
+            app:layout_constraintStart_toEndOf="@id/QuantityText"
+            app:layout_constraintTop_toTopOf="@id/QuantityText" />
+
+        <TextView
+            android:id="@+id/PriceTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/xhdpi10"
+            android:elevation="@dimen/xhdpi150"
+            android:fontFamily="@font/albertasans_bold"
+            android:text="$39.99"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/textSize11"
+            app:layout_constraintBottom_toBottomOf="@id/QuantityText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/QuantityText" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/detailsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/xhdpi10"
+            android:background="@drawable/outlined_button_background"
+            android:fontFamily="@font/albertasans_meduim"
+            android:paddingStart="@dimen/margin"
+            android:paddingEnd="@dimen/margin"
+            android:text="@string/Details"
+            android:textAllCaps="false"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/textSize10"
+            app:backgroundTint="@color/text_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/QuantityText" />
+
+        <TextView
+            android:id="@+id/statusTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/xhdpi10"
+            android:elevation="@dimen/xhdpi150"
+            android:fontFamily="@font/albertasans_regular"
+            android:text="Delivered"
+            android:textColor="@color/green"
+            android:textSize="@dimen/textSize11"
+            app:layout_constraintBottom_toBottomOf="@id/detailsButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/detailsButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

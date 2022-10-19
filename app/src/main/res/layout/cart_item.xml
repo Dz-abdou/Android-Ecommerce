@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/xhdpi10"
+        android:paddingEnd="@dimen/xhdpi10"
+        android:paddingTop="@dimen/xhdpi10"
+        android:paddingBottom="@dimen/xhdpi15">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="@dimen/cartProductImageSize"
+            android:layout_height="@dimen/cartProductImageSize"
+            app:cardCornerRadius="20dip"
+            android:background="@android:color/transparent">
+
+            <ImageView
+                android:id="@+id/cartProductIV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/womanshirt3"
+                android:scaleType="centerCrop" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/xhdpi15"
+            android:layout_marginTop="@dimen/xhdpi2.5"
+            android:layout_marginBottom="@dimen/xhdpi2.5"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/cartProductNameTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/tajwal_bold"
+                    android:maxLength="21"
+                    android:maxLines="1"
+                    android:text="Printed Hoodie"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/textSize12.5" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/cartProductSizeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/tajwal_medium"
+                    android:maxLines="1"
+                    android:text="Size: L"
+                    android:textColor="@color/text_gray_darker"
+                    android:textSize="@dimen/textSize12.5" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/cartProductPriceTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/tajwal_medium"
+                    android:maxLines="1"
+                    android:text="$39.99"
+                    android:textColor="@color/text_gray_darker"
+                    android:textSize="@dimen/textSize12.5" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/xhdpi10"
+            android:layout_marginTop="@dimen/xhdpi2.5"
+            android:layout_marginBottom="@dimen/xhdpi2.5">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:orientation="vertical"
+                android:weightSum="3">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/addButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_add_circle_24"
+                        app:tint="@color/text_gray" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/productsNumberTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/tajwal_medium"
+                        android:text="1"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/textSize10" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/removeProduct"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_remove_circle_outline_24"
+                        app:tint="@color/text_gray" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

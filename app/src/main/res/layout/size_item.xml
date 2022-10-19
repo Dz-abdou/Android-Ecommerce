@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/xhdpi25"
+    android:layout_height="@dimen/xhdpi25"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginEnd="@dimen/xhdpi5"
+    android:id="@+id/sizeItemRL">
+
+        <ImageView
+            android:id="@+id/sizeCircle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_circle_outlined"
+            app:tint="@color/text_gray" />
+
+        <TextView
+            android:id="@+id/sizeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textAlignment="center"
+            android:textColor="@color/text_gray"
+            android:text="S"
+            android:fontFamily="@font/albertasans_bold"
+            android:textSize="@dimen/textSize10"/>
+
+
+</RelativeLayout>

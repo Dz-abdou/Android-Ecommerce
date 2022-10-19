@@ -1,0 +1,14 @@
+<com.google.android.material.appbar.MaterialToolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:minHeight="?attr/actionBarSize"
+    app:menu="@menu/main_menu"
+    app:theme="@style/MyThemeOverlay_Toolbar"
+    app:navigationIcon="@drawable/ic_baseline_dehaze_24"
+    android:background="@color/bg_black"
+    app:titleTextColor="@color/text_gray">
+</com.google.android.material.appbar.MaterialToolbar>

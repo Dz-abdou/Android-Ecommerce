@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="@dimen/xhdpi5"
+    android:background="@color/bg_black">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/itemCardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/product_image_height"
+            app:cardCornerRadius="25dip"
+            android:background="@android:color/transparent">
+
+            <ImageView
+                android:id="@+id/productImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/womanshirt3"
+                android:scaleType="centerCrop" />
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/xhdpi15"
+                android:layout_gravity="end"
+                app:cardCornerRadius="40dip"
+                android:backgroundTint="#c6c6c6"
+                android:elevation="10dip">
+                <ImageSwitcher
+                    android:id="@+id/FavoriteIS"
+                    android:layout_width="@dimen/xhdpi15"
+                    android:layout_height="@dimen/xhdpi16.5"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/ic_heart"
+                    android:backgroundTint="@color/text_gray"
+                    />
+
+            </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/productName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/albertasans_regular"
+        android:text="Oversised shirt"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/textSize10"
+        android:layout_marginTop="@dimen/xhdpi6.5"
+        android:maxLines="1"
+        app:layout_constraintTop_toBottomOf="@id/itemCardView"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/productPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/albertasans_bold"
+        android:text="$209.00"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/textSize10"
+        android:layout_marginTop="@dimen/xhdpi5"
+        android:maxLines="1"
+        app:layout_constraintTop_toBottomOf="@id/productName"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

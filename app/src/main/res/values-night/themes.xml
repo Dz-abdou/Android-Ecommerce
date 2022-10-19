@@ -1,0 +1,40 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.EccomerceK" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/accent</item>
+        <item name="colorPrimaryVariant">@color/dark_accent</item>
+        <item name="colorOnPrimary">@color/bg_black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/accent</item>
+        <item name="colorSecondaryVariant">@color/dark_accent</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="MyThemeOverlay_Toolbar">
+        <item name="titleTextColor">@color/text_gray</item>
+        <item name="colorOnPrimary">@color/text_gray</item>
+    </style>
+
+    <style name="myActionButtonStyle" parent="Widget.AppCompat.ActionButton">
+        <item name="android:minWidth">20dp</item>
+        <item name="android:maxWidth">38dp</item>
+        <item name="android:width">28dp</item>
+    </style>
+
+    <style name="AppTheme.ChipText" parent="TextAppearance.MaterialComponents.Chip">
+        <item name="android:textSize">@dimen/textSize10</item>
+        <item name="fontFamily">@font/albertasans_bold</item>
+    </style>
+
+    <style name="CustomChipChoice" parent="@style/Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@drawable/background_color_chip_state_list</item>
+        <item name="android:textColor">@drawable/text_color_chip_state_list</item>
+        <item name="chipMinHeight">@dimen/chip_min_height</item>
+
+    </style>
+
+</resources>

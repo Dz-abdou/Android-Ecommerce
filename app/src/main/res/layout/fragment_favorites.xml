@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_black"
+    tools:context=".FavoritesFragment">
+
+    <TextView
+        android:id="@+id/myFavoritesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/xhdpi10"
+        android:fontFamily="@font/albertasans_meduim"
+        android:text="@string/My_Favorites"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/textSize15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/favoriteProductsRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/xhdpi5"
+        android:paddingStart="@dimen/xhdpi13"
+        android:paddingEnd="@dimen/xhdpi13"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myFavoritesTextView"
+        tools:itemCount="10"
+        tools:listitem="@layout/product_item_"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
