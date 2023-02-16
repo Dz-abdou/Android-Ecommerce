@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_black"
+    tools:context=".ui.fragments.LoginFragment">
+
+
+    <ImageView
+        android:id="@+id/welcomePageIllustration"
+        android:layout_width="@dimen/xhdpi200"
+        android:layout_height="@dimen/xhdpi200"
+        android:layout_marginTop="@dimen/xhdpi40"
+        android:src="@drawable/login_illustration"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/phoneNumberCL"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcomePageIllustration"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/createAnAccountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/AlreadyHaveAnAccount"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/textSize15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginTop="@dimen/xhdpi10"
+            android:layout_marginEnd="@dimen/margin"
+            android:elevation="10dip"
+            android:hint="@string/prompt_email"
+            android:textColorHint="@color/text_gray_darker"
+            app:boxBackgroundColor="@color/light_bg_black"
+            app:boxCornerRadiusBottomEnd="@dimen/xhdpi5"
+            app:boxCornerRadiusBottomStart="@dimen/xhdpi5"
+            app:boxCornerRadiusTopEnd="@dimen/xhdpi5"
+            app:boxCornerRadiusTopStart="@dimen/xhdpi5"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            app:hintTextColor="@color/accent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/createAnAccountTV">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailTIET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/albertasans_regular"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/textSize12.5" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:elevation="10dip"
+            android:hint="@string/prompt_password"
+            android:textColorHint="@color/text_gray_darker"
+            app:boxBackgroundColor="@color/light_bg_black"
+            app:boxCornerRadiusBottomEnd="@dimen/xhdpi5"
+            app:boxCornerRadiusBottomStart="@dimen/xhdpi5"
+            app:boxCornerRadiusTopEnd="@dimen/xhdpi5"
+            app:boxCornerRadiusTopStart="@dimen/xhdpi5"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            app:hintTextColor="@color/accent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/emailTIL">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordTTIET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/albertasans_regular"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/textSize12.5" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <CheckBox
+            android:id="@+id/rememberMeCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:fontFamily="@font/poppins_regular"
+            android:padding="@dimen/xhdpi2.5"
+            android:text="@string/rememberMe"
+            android:textColor="@color/text_gray_darker"
+            android:textSize="@dimen/textSize10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/passwordTIL" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/loginButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:fontFamily="@font/albertasans_meduim"
+            android:padding="@dimen/xhdpi10"
+            android:text="@string/Login"
+            android:textAllCaps="false"
+            android:textColor="@color/bg_black"
+            android:textSize="@dimen/textSize12.5"
+            app:cornerRadius="@dimen/xhdpi20"
+            app:layout_constraintBottom_toTopOf="@id/dontHaveAnAccountTV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rememberMeCheckBox"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/dontHaveAnAccountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xhdpi5"
+            android:layout_marginEnd="@dimen/xhdpi2.5"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/donthaveanaccount"
+            android:textColor="@color/text_gray_darker"
+            android:textSize="@dimen/textSize10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/signupTV"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/loginButton" />
+
+        <TextView
+            android:id="@+id/signupTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/signup"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/textSize10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintBottom_toBottomOf="@id/dontHaveAnAccountTV"
+            app:layout_constraintStart_toEndOf="@+id/dontHaveAnAccountTV"
+            app:layout_constraintTop_toTopOf="@id/dontHaveAnAccountTV" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

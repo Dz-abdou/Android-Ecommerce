@@ -4,17 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProductActivity"
+    tools:context=".ui.activities.ProductActivity"
     android:background="@color/bg_black">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/backgroundIV"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         android:src="@drawable/womanshirt1" />
 
     <ImageView
+        android:id="@+id/backArrow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
@@ -33,6 +34,7 @@
         android:orientation="vertical">
 
         <com.google.android.material.card.MaterialCardView
+            android:id="@+id/addToFavoritesCV"
             android:layout_width="@dimen/xhdpi40"
             android:layout_height="@dimen/xhdpi40"
             android:layout_marginBottom="@dimen/xhdpi15"
@@ -40,8 +42,8 @@
             app:cardCornerRadius="@dimen/xhdpi20"
             android:backgroundTint="#c6c6c6"
             android:elevation="10dip">
-            <ImageSwitcher
-                android:id="@+id/FavoriteIS"
+            <ImageView
+                android:id="@+id/FavoriteIV"
                 android:layout_width="@dimen/xhdpi16.5"
                 android:layout_height="@dimen/xhdpi16.5"
                 android:layout_gravity="center"
@@ -130,7 +132,6 @@
                 android:ellipsize="end"
                 android:fontFamily="@font/albertasans_bold"
                 android:maxLines="2"
-                android:text="Printed Oversized hoodie"
                 android:textAlignment="textStart"
                 android:textColor="@color/text_gray"
                 android:textSize="@dimen/textSize15"
@@ -148,7 +149,6 @@
                 android:layout_marginStart="@dimen/margin"
                 android:layout_marginEnd="@dimen/margin"
                 android:fontFamily="@font/albertasans_bold"
-                android:text="$68.99"
                 android:textAlignment="textEnd"
                 android:textColor="@color/text_gray"
                 android:textSize="@dimen/textSize15"
@@ -232,12 +232,15 @@
                 android:orientation="horizontal" >
 
                 <ImageView
+                    android:id="@+id/decreaseCounterIV"
                     android:layout_width="@dimen/xhdpi25"
                     android:layout_height="@dimen/xhdpi25"
                     android:src="@drawable/ic_remove_circle_outlined"
                     app:tint="@color/text_gray"
-                    android:layout_marginEnd="@dimen/xhdpi5" />
+                    android:layout_marginEnd="@dimen/xhdpi5"
+                    android:contentDescription="@string/increase" />
                 <TextView
+                    android:id="@+id/counterTV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/text_gray"
@@ -245,11 +248,13 @@
                     android:textSize="@dimen/textSize10"
                     android:layout_gravity="center_vertical"/>
                 <ImageView
+                    android:id="@+id/increaseCounterIV"
                     android:layout_width="@dimen/xhdpi25"
                     android:layout_height="@dimen/xhdpi25"
                     android:src="@drawable/ic_add_circle_outlined"
                     app:tint="@color/text_gray"
-                    android:layout_marginStart="@dimen/xhdpi5" />
+                    android:layout_marginStart="@dimen/xhdpi5"
+                    android:contentDescription="@string/decrease" />
             </LinearLayout>
 
             <RelativeLayout

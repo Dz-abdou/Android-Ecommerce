@@ -1,12 +1,12 @@
 <resources>
-    <string name="app_name">EcommerceK</string>
+    <string name="app_name">Ecommerce</string>
     <string name="Details">Details</string>
     <string name="Checkout">Checkout</string>
     <string name="add_to_cart">Add to cart</string>
     <string name="Bag_Total">Bag total</string>
     <string name="cart">Cart</string>
     <string name="Categories">Categories</string>
-    <string name="Color">Color</string>
+    <string name="Color">Color: </string>
     <string name="trending">Trending</string>
     <string name="heart">Heart</string>
     <string name="favorites">Favorites</string>
@@ -14,7 +14,7 @@
     <string name="myProfile">My Profile</string>
     <string name="search">Search</string>
     <string name="Shipping">Shipping</string>
-    <string name="size">Size</string>
+    <string name="size">Size: </string>
     <string name="Sub_Total">Sub total</string>
     <string name="My_Cart">My Cart</string>
     <string name="My_Favorites">My Favorites</string>
@@ -32,7 +32,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="settings">Settings</string>
     <string name="account">Account</string>
-    <string name="orderNo">Order №5896374</string>
+    <string name="orderNo">Order №</string>
     <string name="tracking_code">Tracking Code: </string>
     <string name="quantity">Quantity: </string>
     <string name="total_amount">Total Amount: </string>
@@ -43,5 +43,50 @@
     <string name="city">City</string>
     <string name="stateProvinceRegion">State/Province/Region</string>
     <string name="zipCode">Zip Cdoe</string>
+    <string name="country">Country</string>
+    <string name="saveAddress">Save Address</string>
+    <string name="myAccount">My Account</string>
+    <string name="age">Age</string>
+    <string name="save">Save</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">Welcome!</string>
+    <string name="Continue">Continue</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="quote">Fashion is the armor to survive the reality of everyday life.</string>
+    <string name="CreateAnAccount">Create an account</string>
+    <string name="AlreadyHaveAnAccount">Already have an account!</string>
+    <string name="phoneNumberHint">+XXX XXXXXXXXXX</string>
+    <string name="rememberMe">Remember me</string>
+    <string name="sendOTP">Send OTP</string>
+    <string name="fillTheCode">Fill The Code</string>
+    <string name="didntGetTheCode">Didn\'t get the code? </string>
+    <string name="resend">Resend</string>
+    <string name="confirm">Confirm</string>
+    <string name="Login">Login</string>
+    <string name="donthaveanaccount">Don\'t have an account?</string>
+    <string name="signup">Sign-up</string>
+    <string name="confirmPassword">Confirm Password</string>
+    <string name="increase">Increase</string>
+    <string name="decrease">Decrease</string>
+    <string name="your_cart_is_empty">Your cart is empty!</string>
+    <string name="items"> items</string>
+    <string name="deliveryMethod">Delivery method: </string>
+    <string name="paymentMethod">Payment method: </string>
+    <string name="paymentOnDelivery">Payment on delivery.</string>
+    <string name="discount">Discount: </string>
+    <string name="ShippingAddress">Shipping address: </string>
+    <string name="otherInformations">Other informations:</string>
+    <string name="units">Units: </string>
+    <string name="aboutUs">About Us</string>
+    <string-array name="sex">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
 
 </resources>

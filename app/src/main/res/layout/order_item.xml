@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardBackgroundColor="@color/gray"
+    app:cardBackgroundColor="@color/light_bg_black"
     app:cardCornerRadius="@dimen/xhdpi5"
     app:cardElevation="@dimen/xhdpi10"
     android:layout_marginBottom="@dimen/margin">
@@ -15,8 +15,8 @@
         android:elevation="@dimen/xhdpi150">
 
         <TextView
-            android:id="@+id/orderNumberTV"
-            android:layout_width="0dp"
+            android:id="@+id/orderNumberLabelTV"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/xhdpi10"
             android:layout_marginTop="@dimen/xhdpi10"
@@ -25,11 +25,26 @@
             android:text="@string/orderNo"
             android:textColor="@color/text_gray"
             android:textSize="@dimen/textSize12.5"
+            app:layout_constraintEnd_toStartOf="@id/orderNumberTV"
             app:layout_constraintBottom_toTopOf="@+id/trackingCodeText"
-            app:layout_constraintEnd_toStartOf="@+id/orderDateTv"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@id/orderItemCV"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/orderNumberTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/xhdpi150"
+            android:fontFamily="@font/albertasans_meduim"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/textSize12.5"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintTop_toTopOf="@id/orderNumberLabelTV"
+            app:layout_constraintBottom_toBottomOf="@id/orderNumberLabelTV"
+            app:layout_constraintStart_toEndOf="@id/orderNumberLabelTV"
+            app:layout_constraintEnd_toStartOf="@id/orderDateTv"/>
 
         <TextView
             android:id="@+id/orderDateTv"
@@ -38,11 +53,10 @@
             android:layout_margin="@dimen/xhdpi10"
             android:alpha="0.5"
             android:fontFamily="@font/albertasans_regular"
-            android:text="19-12-2022"
             android:textColor="@color/text_gray"
             android:textSize="@dimen/textSize11"
-            app:layout_constraintEnd_toEndOf="@id/orderItemCV"
             app:layout_constraintStart_toEndOf="@id/orderNumberTV"
+            app:layout_constraintEnd_toEndOf="@id/orderItemCV"
             app:layout_constraintTop_toTopOf="@id/orderItemCV" />
 
         <TextView
@@ -52,13 +66,15 @@
             android:layout_marginStart="@dimen/xhdpi10"
             android:layout_marginTop="@dimen/xhdpi10"
             android:alpha="0.5"
+            android:ellipsize="end"
+            android:maxLines="1"
             android:fontFamily="@font/albertasans_regular"
             android:text="@string/tracking_code"
             android:textColor="@color/text_gray"
             android:textSize="@dimen/textSize11"
             app:layout_constraintBottom_toTopOf="@+id/QuantityText"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/orderNumberTV" />
+            app:layout_constraintTop_toBottomOf="@+id/orderNumberLabelTV" />
 
         <TextView
             android:id="@+id/trackingNumberTV"
@@ -66,7 +82,6 @@
             android:layout_height="wrap_content"
             android:elevation="@dimen/xhdpi150"
             android:fontFamily="@font/albertasans_regular"
-            android:text=" YA3698745850156"
             android:textColor="@color/text_gray"
             android:textSize="@dimen/textSize11"
             app:layout_constraintBottom_toBottomOf="@id/trackingCodeText"
@@ -80,6 +95,7 @@
             android:layout_marginStart="@dimen/xhdpi10"
             android:layout_marginTop="@dimen/xhdpi10"
             android:alpha="0.5"
+            android:ellipsize="end"
             android:fontFamily="@font/albertasans_regular"
             android:text="@string/quantity"
             android:textColor="@color/text_gray"
@@ -107,7 +123,6 @@
             android:layout_height="wrap_content"
             android:elevation="@dimen/xhdpi150"
             android:fontFamily="@font/albertasans_bold"
-            android:text=" 3"
             android:textColor="@color/text_gray"
             android:textSize="@dimen/textSize11"
             app:layout_constraintBottom_toBottomOf="@id/QuantityText"
@@ -121,7 +136,6 @@
             android:layout_marginEnd="@dimen/xhdpi10"
             android:elevation="@dimen/xhdpi150"
             android:fontFamily="@font/albertasans_bold"
-            android:text="$39.99"
             android:textColor="@color/text_gray"
             android:textSize="@dimen/textSize11"
             app:layout_constraintBottom_toBottomOf="@id/QuantityText"
@@ -153,7 +167,6 @@
             android:layout_marginEnd="@dimen/xhdpi10"
             android:elevation="@dimen/xhdpi150"
             android:fontFamily="@font/albertasans_regular"
-            android:text="Delivered"
             android:textColor="@color/green"
             android:textSize="@dimen/textSize11"
             app:layout_constraintBottom_toBottomOf="@id/detailsButton"

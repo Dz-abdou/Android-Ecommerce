@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/myAccount"
+        android:title="@string/myAccount"
+        android:icon="@drawable/ic_profile"/>
+    <item
+        android:id="@+id/myOrders"
+        android:title="@string/myOrders"
+        android:icon="@drawable/orders_box_open_outlined"/>
+    <item
+        android:id="@+id/aboutUs"
+        android:title="@string/aboutUs"
+        android:icon="@drawable/about_us_outlined"/>
+    <item
+        android:id="@+id/logout"
+        android:title="@string/logout"
+        android:icon="@drawable/ic_outline_logout_24"/>
+</menu>

@@ -37,4 +37,18 @@
 
     </style>
 
+    <style name="spinnerItemStyle" parent="android:Widget.TextView.SpinnerItem">
+    </style>
+
+    <style name="spinnerDropDownItemStyle" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+
+    </style>
+    <style name="MyDialog" parent="Theme.Material3.Dark.Dialog.Alert">
+        <item name="titleTextColor">@color/text_gray</item>
+        <item name="colorOnPrimary">@color/text_gray</item>
+        <item name="android:textColor">@color/text_gray</item>
+
+    </style>
+
+
 </resources>

@@ -37,4 +37,6 @@
 
     </style>
 
+    <style name="MyDialog" parent="Theme.Material3.Dark.Dialog.Alert"/>
+
 </resources>

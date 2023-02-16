@@ -30,6 +30,8 @@
     <dimen name="textSize15">15sp</dimen>
     <dimen name="textSize25">25sp</dimen>
     <dimen name="textSize12.5">12.5sp</dimen>
+    <dimen name="textSize13">13sp</dimen>
+    <dimen name="textSize14">14sp</dimen>
     <dimen name="textSize8">8sp</dimen>
     <dimen name="textSize10">10sp</dimen>
     <dimen name="cartProductImageSize">55dp</dimen>

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_black"
-    tools:context=".ProfileFragment">
+    tools:context=".ui.fragments.ProfileFragment">
 
     <TextView
         android:id="@+id/myProfileTv"
@@ -197,7 +197,7 @@
 
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/settingsCV"
+                android:id="@+id/logoutCV"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/xhdpi45"
                 app:layout_constraintTop_toBottomOf="@id/shippingAddressesCV"
@@ -212,10 +212,10 @@
                 android:id="@+id/settingsIcon"
                 android:layout_width="@dimen/xhdpi20"
                 android:layout_height="@dimen/xhdpi20"
-                android:src="@drawable/settings"
-                app:layout_constraintTop_toTopOf="@id/settingsCV"
-                app:layout_constraintBottom_toBottomOf="@id/settingsCV"
-                app:layout_constraintStart_toStartOf="@id/settingsCV"
+                android:src="@drawable/ic_outline_logout_24"
+                app:layout_constraintTop_toTopOf="@id/logoutCV"
+                app:layout_constraintBottom_toBottomOf="@id/logoutCV"
+                app:layout_constraintStart_toStartOf="@id/logoutCV"
                 android:layout_marginStart="@dimen/xhdpi10"
                 app:tint="@color/accent"
                 android:elevation="1dp"/>
@@ -228,18 +228,18 @@
                 android:fontFamily="@font/albertasans_regular"
                 android:textColor="@color/text_gray"
                 app:layout_constraintStart_toEndOf="@id/settingsIcon"
-                app:layout_constraintTop_toTopOf="@id/settingsCV"
-                app:layout_constraintBottom_toBottomOf="@id/settingsCV"
-                android:text="@string/settings"
+                app:layout_constraintTop_toTopOf="@id/logoutCV"
+                app:layout_constraintBottom_toBottomOf="@id/logoutCV"
+                android:text="@string/logout"
                 android:layout_marginStart="@dimen/xhdpi10"/>
 
             <ImageView
                 android:layout_width="@dimen/xhdpi15"
                 android:layout_height="@dimen/xhdpi15"
                 android:src="@drawable/ic_baseline_arrow_forward"
-                app:layout_constraintTop_toTopOf="@id/settingsCV"
-                app:layout_constraintBottom_toBottomOf="@id/settingsCV"
-                app:layout_constraintEnd_toEndOf="@id/settingsCV"
+                app:layout_constraintTop_toTopOf="@id/logoutCV"
+                app:layout_constraintBottom_toBottomOf="@id/logoutCV"
+                app:layout_constraintEnd_toEndOf="@id/logoutCV"
                 android:layout_marginEnd="@dimen/xhdpi10"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

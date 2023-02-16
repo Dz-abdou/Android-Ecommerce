@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="@dimen/margin"
-    app:cardBackgroundColor="@color/gray"
+    app:cardBackgroundColor="@color/light_bg_black"
     app:cardCornerRadius="@dimen/xhdpi5"
     app:cardElevation="@dimen/xhdpi10">
 
@@ -19,21 +19,6 @@
         android:paddingEnd="@dimen/xhdpi15">
 
         <TextView
-            android:id="@+id/nameTV"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:elevation="@dimen/xhdpi150"
-            android:fontFamily="@font/albertasans_bold"
-            android:text="John Doe"
-            android:textColor="@color/text_gray"
-            android:textSize="@dimen/textSize12.5"
-            app:layout_constraintBottom_toTopOf="@+id/addressTV"
-            app:layout_constraintEnd_toStartOf="@+id/editTV"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="@id/orderItemCV"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
             android:id="@+id/editTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -42,23 +27,23 @@
             android:textColor="@color/accent"
             android:textSize="@dimen/textSize12.5"
             app:layout_constraintEnd_toEndOf="@id/orderItemCV"
-            app:layout_constraintStart_toEndOf="@id/nameTV"
+            app:layout_constraintStart_toEndOf="@id/addressTV"
             app:layout_constraintTop_toTopOf="@id/orderItemCV" />
 
         <TextView
             android:id="@+id/addressTV"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/xhdpi10"
             android:ellipsize="end"
             android:fontFamily="@font/albertasans_regular"
             android:maxLines="1"
             android:text="3 Newbridge Court"
             android:textColor="@color/text_gray"
             android:textSize="@dimen/textSize11"
-            app:layout_constraintBottom_toTopOf="@+id/restOfAddressTV"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nameTV" />
+            app:layout_constraintEnd_toStartOf="@+id/editTV"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/orderItemCV"
+            app:layout_constraintTop_toTopOf="parent"  />
 
         <TextView
             android:id="@+id/restOfAddressTV"

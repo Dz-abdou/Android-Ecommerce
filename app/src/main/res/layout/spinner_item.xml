@@ -1,0 +1,10 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sexSpinnerTV"
+    style="@style/spinnerItemStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/albertasans_regular"
+    android:textColor="@color/text_gray_darker"
+    android:textSize="@dimen/textSize12.5"
+    android:ellipsize="marquee"
+    android:singleLine="true"  />

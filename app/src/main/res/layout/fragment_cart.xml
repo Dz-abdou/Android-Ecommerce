@@ -6,8 +6,32 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/bg_black"
     android:orientation="vertical"
-    tools:context=".CartFragment">
+    android:id="@+id/fragment_cart_constraintLayout"
+    tools:context=".ui.fragments.CartFragment">
 
+    <ImageView
+        android:id="@+id/cartEmptyIllu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/checkoutLL"
+        android:src="@drawable/cart_empty_illustration"
+        android:layout_margin="@dimen/margin"
+        android:visibility="gone"
+        android:contentDescription="@string/your_cart_is_empty" />
+
+    <ProgressBar
+        android:id="@+id/progress_circular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/margin"
+        app:layout_constraintBottom_toTopOf="@id/checkoutLL"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
     <LinearLayout
         android:id="@+id/vvv"
         android:layout_width="0dp"
@@ -48,6 +72,7 @@
         android:layout_alignParentBottom="true"
         android:gravity="center"
         android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/vvv"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -84,7 +109,7 @@
                 android:layout_marginStart="@dimen/xhdpi6.5"
                 android:layout_marginEnd="@dimen/margin"
                 android:fontFamily="@font/albertasans_meduim"
-                android:text="$209.99"
+                android:text="$0.00"
                 android:textColor="@color/text_gray"
                 android:textSize="@dimen/textSize12.5" />
 
@@ -127,7 +152,7 @@
                 android:layout_marginStart="@dimen/xhdpi6.5"
                 android:layout_marginEnd="@dimen/margin"
                 android:fontFamily="@font/albertasans_meduim"
-                android:text="$60.00"
+                android:text="$0.00"
                 android:textColor="@color/text_gray"
                 android:textSize="@dimen/textSize12.5" />
 
@@ -170,7 +195,7 @@
                 android:layout_marginStart="@dimen/xhdpi6.5"
                 android:layout_marginEnd="@dimen/margin"
                 android:fontFamily="@font/albertasans_meduim"
-                android:text="$369.99"
+                android:text="$0.00"
                 android:textColor="@color/text_gray"
                 android:textSize="@dimen/textSize12.5" />
 

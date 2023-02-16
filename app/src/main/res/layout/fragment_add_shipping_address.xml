@@ -6,43 +6,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/bg_black"
     android:orientation="vertical"
-    tools:context=".AddShippingAddressFragment">
+    tools:context=".ui.fragments.AddShippingAddressFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/margin">
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/fullNameTIL"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:elevation="10dip"
-            app:boxCornerRadiusTopEnd="@dimen/xhdpi5"
-            app:boxCornerRadiusTopStart="@dimen/xhdpi5"
-            android:hint="@string/full_name"
-            android:textColorHint="@color/text_gray_darker"
-            app:hintTextColor="@color/accent"
-            app:boxBackgroundColor="@color/gray"
-            app:boxCornerRadiusBottomEnd="@dimen/xhdpi5"
-            app:boxCornerRadiusBottomStart="@dimen/xhdpi5"
-            app:endIconMode="clear_text"
-            app:errorEnabled="true">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/fullNameTIET"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/text_gray"
-                android:maxLines="1"
-                android:inputType="text"
-                android:fontFamily="@font/albertasans_regular"
-                android:textSize="@dimen/textSize12.5"/>
-
-        </com.google.android.material.textfield.TextInputLayout>
 
 
         <com.google.android.material.textfield.TextInputLayout
@@ -50,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fullNameTIL"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:elevation="10dip"
             app:boxCornerRadiusTopEnd="@dimen/xhdpi5"
@@ -159,18 +128,60 @@
             app:errorEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/zipCode"
+                android:id="@+id/zipCodeTIET"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/text_gray"
                 android:maxLines="1"
-                android:inputType="text"
+                android:inputType="number"
                 android:fontFamily="@font/albertasans_regular"
                 android:textSize="@dimen/textSize12.5"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <androidx.cardview.widget.CardView
+            android:id="@+id/countriesCV"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/xhdpi40"
+            app:layout_constraintTop_toBottomOf="@id/zipCodeTIL"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:cardCornerRadius="@dimen/xhdpi5"
+            app:cardBackgroundColor="@color/gray"/>
 
+        <AutoCompleteTextView
+            android:id="@+id/countriesAutoCompleteTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/countriesCV"
+            app:layout_constraintStart_toStartOf="@id/countriesCV"
+            app:layout_constraintEnd_toEndOf="@id/countriesCV"
+            app:layout_constraintBottom_toBottomOf="@id/countriesCV"
+            android:textColor="@color/text_gray"
+            android:textColorHint="@color/text_gray_darker"
+            android:hint="@string/country"
+            android:maxLines="1"
+            android:elevation="@dimen/xhdpi40"
+            android:layout_margin="@dimen/xhdpi6.5"
+            android:background="@android:color/transparent"
+            android:textSize="@dimen/textSize12.5"
+            android:fontFamily="@font/albertasans_regular"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/saveAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/countriesCV"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="@dimen/textSize12.5"
+            android:fontFamily="@font/albertasans_meduim"
+            android:text="@string/saveAddress"
+            android:textAllCaps="false"
+            android:textColor="@color/bg_black"
+            android:padding="@dimen/xhdpi10"
+            android:layout_marginTop="@dimen/xhdpi30"
+            app:cornerRadius="@dimen/xhdpi20"
+            app:layout_constraintEnd_toEndOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

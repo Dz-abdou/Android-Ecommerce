@@ -46,4 +46,6 @@
 	<dimen name="xhdpi45">60dp</dimen>
 	<dimen name="xhdpi125">166.7dp</dimen>
 	<dimen name="textSize11">14.7sp</dimen>
+	<dimen name="textSize14">18.7sp</dimen>
+	<dimen name="textSize13">17.3sp</dimen>
 </resources>

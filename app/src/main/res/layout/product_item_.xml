@@ -6,7 +6,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     android:padding="@dimen/xhdpi5"
+    android:id="@+id/productItemConstraintLayout"
     android:background="@color/bg_black">
+
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/itemCardView"
@@ -17,6 +19,7 @@
         app:cardBackgroundColor="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="parent">
 
+
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="@dimen/product_image_height"
@@ -26,9 +29,7 @@
             <ImageView
                 android:id="@+id/productImageView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/womanshirt3"
-                android:scaleType="centerCrop" />
+                android:layout_height="match_parent" />
 
 
             <androidx.cardview.widget.CardView
@@ -39,14 +40,12 @@
                 app:cardCornerRadius="40dip"
                 android:backgroundTint="#c6c6c6"
                 android:elevation="10dip">
-                <ImageSwitcher
-                    android:id="@+id/FavoriteIS"
+                <ImageView
+                    android:id="@+id/FavoriteIV"
                     android:layout_width="@dimen/xhdpi15"
                     android:layout_height="@dimen/xhdpi16.5"
                     android:layout_margin="5dip"
-                    android:background="@drawable/ic_heart"
-                    android:backgroundTint="@color/text_gray"
-                    />
+                    android:background="@drawable/heart_svgrepo_com" />
 
             </androidx.cardview.widget.CardView>
         </com.google.android.material.card.MaterialCardView>

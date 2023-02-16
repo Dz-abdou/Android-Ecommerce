@@ -107,7 +107,7 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:id="@+id/addButton"
+                        android:id="@+id/increaseCounterIV"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_baseline_add_circle_24"
@@ -121,10 +121,10 @@
                     android:layout_weight="1">
 
                     <TextView
-                        android:id="@+id/productsNumberTV"
+                        android:id="@+id/QuantityTV"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
+                        android:layout_centerHorizontal="true"
                         android:fontFamily="@font/tajwal_medium"
                         android:text="1"
                         android:textColor="@color/text_gray"
@@ -137,7 +137,7 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:id="@+id/removeProduct"
+                        android:id="@+id/decreaseCounterIV"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_baseline_remove_circle_outline_24"

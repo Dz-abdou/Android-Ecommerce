@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/xhdpi100"
+    app:cardBackgroundColor="@color/light_bg_black"
+    app:cardCornerRadius="@dimen/xhdpi8"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="@dimen/margin">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/productImageIV"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/womanshirt1"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"/>
+
+        <TextView
+            android:id="@+id/productNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/xhdpi10"
+            android:layout_marginTop="@dimen/xhdpi10"
+            android:elevation="@dimen/xhdpi150"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Pullover"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/textSize12.5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/productImageIV"/>
+
+        <TextView
+            android:id="@+id/sizeLabelTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/xhdpi10"
+            android:elevation="@dimen/xhdpi150"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/size"
+            android:alpha="0.5"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/textSize11"
+            app:layout_constraintTop_toBottomOf="@id/productNameTV"
+            app:layout_constraintStart_toEndOf="@id/productImageIV"/>
+
+        <TextView
+            android:id="@+id/sizeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/xhdpi150"
+            android:layout_marginStart="@dimen/xhdpi2.5"
+            android:fontFamily="@font/poppins_regular"
+            android:text="L"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/textSize11"
+            app:layout_constraintTop_toTopOf="@id/sizeLabelTV"
+            app:layout_constraintBottom_toBottomOf="@id/sizeLabelTV"
+            app:layout_constraintStart_toEndOf="@id/sizeLabelTV"/>
+
+        <TextView
+            android:id="@+id/colorTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/xhdpi10"
+            android:elevation="@dimen/xhdpi150"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/Color"
+            android:alpha="0.5"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/textSize11"
+            app:layout_constraintTop_toBottomOf="@id/sizeLabelTV"
+            app:layout_constraintStart_toEndOf="@+id/productImageIV"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/colorCV"
+            android:layout_width="@dimen/xhdpi12.5"
+            android:layout_height="@dimen/xhdpi12.5"
+            app:cardCornerRadius="@dimen/xhdpi10"
+            android:layout_marginStart="@dimen/xhdpi5"
+            app:layout_constraintStart_toEndOf="@id/colorTV"
+            app:layout_constraintTop_toTopOf="@id/colorTV"
+            app:layout_constraintBottom_toBottomOf="@id/colorTV"/>
+
+
+        <TextView
+            android:id="@+id/numberOfProductsLabelTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/xhdpi10"
+            android:elevation="@dimen/xhdpi150"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/units"
+            android:alpha="0.5"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/textSize11"
+            app:layout_constraintTop_toBottomOf="@id/colorTV"
+            app:layout_constraintStart_toEndOf="@+id/productImageIV"/>
+
+        <TextView
+            android:id="@+id/numberOfProductsTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/xhdpi150"
+            android:layout_marginStart="@dimen/xhdpi2.5"
+            android:fontFamily="@font/poppins_regular"
+            android:text="3"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/textSize11"
+            app:layout_constraintTop_toTopOf="@id/numberOfProductsLabelTV"
+            app:layout_constraintBottom_toBottomOf="@id/numberOfProductsLabelTV"
+            app:layout_constraintStart_toEndOf="@id/numberOfProductsLabelTV"
+            />
+
+        <TextView
+            android:id="@+id/PriceTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/xhdpi150"
+            android:layout_marginEnd="@dimen/xhdpi10"
+            android:fontFamily="@font/poppins_regular"
+            android:text="$66.99"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/textSize11"
+            app:layout_constraintTop_toTopOf="@id/numberOfProductsLabelTV"
+            app:layout_constraintBottom_toBottomOf="@id/numberOfProductsLabelTV"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

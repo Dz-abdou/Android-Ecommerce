@@ -5,7 +5,88 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_black"
-    tools:context="com.example.eccomercek.HomeFragment">
+    tools:context="com.example.ecommerce.ui.fragments.HomeFragment">
+
+
+    <ProgressBar
+        android:id="@+id/progress_circular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/xhdpi10"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/searchCV"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/xhdpi40"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/xhdpi10"
+        android:layout_marginEnd="@dimen/xhdpi5"
+        android:layout_marginBottom="@dimen/margin"
+        app:cardBackgroundColor="@color/light_bg_black"
+        app:cardCornerRadius="@dimen/xhdpi8"
+        app:layout_constraintBottom_toTopOf="@id/categoriesChipsScrollView"
+        app:layout_constraintEnd_toStartOf="@id/filterCV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/searchIconIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/xhdpi10"
+        android:elevation="@dimen/xhdpi10"
+        android:src="@drawable/ic_search"
+        app:layout_constraintBottom_toBottomOf="@id/searchCV"
+        app:layout_constraintEnd_toEndOf="@id/searchCV"
+        app:layout_constraintStart_toEndOf="@id/searchET"
+        app:layout_constraintTop_toTopOf="@id/searchCV"
+        app:tint="@color/accent" />
+
+    <AutoCompleteTextView
+        android:id="@+id/searchET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xhdpi10"
+        android:background="@android:color/transparent"
+        android:elevation="@dimen/xhdpi10"
+        android:fontFamily="@font/poppins_regular"
+        android:hint="@string/search"
+        android:textColor="@color/text_gray"
+        android:textColorHint="@color/text_gray_darker"
+        android:textSize="@dimen/textSize12.5"
+        app:layout_constraintBottom_toBottomOf="@id/searchCV"
+        app:layout_constraintEnd_toStartOf="@id/searchIconIv"
+        app:layout_constraintStart_toStartOf="@id/searchCV"
+        app:layout_constraintTop_toTopOf="@id/searchCV" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/filterCV"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/xhdpi40"
+        android:layout_marginEnd="@dimen/margin"
+        app:cardBackgroundColor="@color/light_bg_black"
+        app:cardCornerRadius="@dimen/xhdpi8"
+        app:layout_constraintBottom_toBottomOf="@id/searchCV"
+        app:layout_constraintDimensionRatio="2.5:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/searchCV"
+        app:layout_constraintTop_toTopOf="@id/searchCV">
+
+        <Spinner
+            android:paddingStart="@dimen/xhdpi12.5"
+            android:id="@+id/filterBySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/accent"
+            android:prompt="@color/text_gray_darker"
+            android:foregroundTint="@color/accent"
+            tools:ignore="RtlSymmetry" />
+    </com.google.android.material.card.MaterialCardView>
 
 
     <HorizontalScrollView
@@ -13,12 +94,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin"
-        android:layout_marginTop="@dimen/xhdpi5"
+        android:layout_marginTop="@dimen/xhdpi10"
         android:background="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/searchCV">
 
         <com.google.android.material.chip.ChipGroup
             android:id="@+id/categoriesChipGroup"
@@ -28,27 +109,34 @@
             app:singleLine="true"
             app:singleSelection="true">
 
-
         </com.google.android.material.chip.ChipGroup>
 
 
     </HorizontalScrollView>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/productsRecyclerView"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeContainer"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:orientation="vertical"
         android:layout_marginTop="@dimen/xhdpi5"
-        android:paddingStart="@dimen/xhdpi15"
-        android:paddingEnd="@dimen/xhdpi15"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/categoriesChipsScrollView"
-        tools:itemCount="10"
-        tools:listitem="@layout/product_item_"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/categoriesChipsScrollView">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/productsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/xhdpi15"
+            android:paddingEnd="@dimen/xhdpi15"
+            tools:itemCount="10"
+            tools:listitem="@layout/product_item_" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
