@@ -1,7 +1,7 @@
 
 # Native Ecommerce Android App
 
-    This is a native Ecommerce Android application written in Kotlin, which follows the MVVM architecture pattern. It uses Firebase as the backend, Firebase Auth for authentication, Firestore for storing data, and Firebase Storage for storing images.
+This is a native Ecommerce Android application written in Kotlin, which follows the MVVM architecture pattern. It uses Firebase as the backend, Firebase Auth for authentication, Firestore for storing data, and Firebase Storage for storing images.
 
 ## Screenshots
 
